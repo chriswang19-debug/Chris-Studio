@@ -514,7 +514,6 @@
 
       var material = new THREE.MeshStandardMaterial({ color: 0xC9962B, metalness: 0.25, roughness: 0.55 });
       var mesh = new THREE.Mesh(geometry, material);
-      mesh.rotation.z = -Math.PI / 2;
       scene.add(mesh);
 
       var bbox = geometry.boundingBox;
@@ -522,7 +521,7 @@
       bbox.getSize(size);
       var maxDim = Math.max(size.x, size.y, size.z) || 1;
       var dist = maxDim * 1.8;
-      camera.position.set(dist, dist * 0.6, dist);
+      camera.position.set(0, 0, dist * 1.4);
       camera.lookAt(0, 0, 0);
       if (controls){ controls.update(); }
     }catch(e){
