@@ -521,7 +521,7 @@
       bbox.getSize(size);
       var maxDim = Math.max(size.x, size.y, size.z) || 1;
       var dist = maxDim * 1.8;
-      camera.position.set(0, 0, dist * 1.4);
+      camera.position.set(-dist * 1.4, 0, 0); 
       camera.lookAt(0, 0, 0);
       if (controls){ controls.update(); }
     }catch(e){
